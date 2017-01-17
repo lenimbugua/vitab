@@ -65,3 +65,5 @@ target/
 .DS_Store
 staticfiles/
 .env.yml
+db.sqlite3
+migrations/

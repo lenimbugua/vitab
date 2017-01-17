@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/1.10/ref/settings/
 """
 
 import os
+import cloudinary
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -37,8 +38,15 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
     'api'
 ]
+
+cloudinary.config(
+  cloud_name = "vitab",
+  api_key = "483645889728871",
+  api_secret = "7cqhvAxu5Fr39U3ZCeWnH-zaGZY"
+)
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
